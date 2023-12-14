@@ -25,7 +25,7 @@ it("increments count when increment button is clicked", () => {
   expect(count.textContent).toBe("1");
 });
 
-it("decrements count when increment button is clicked", () => {
+it("decrements count when decrement button is clicked", () => {
   // Render the component with react-testing-library
   // https://testing-library.com/docs/react-testing-library/api#render
   const { getByText, getByTestId } = render(<Counter />);
