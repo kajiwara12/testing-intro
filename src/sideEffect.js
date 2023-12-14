@@ -8,4 +8,7 @@ const countWordsInFile = async (filepath) => {
   console.log(numberOfWords);
 };
 
+// Write to a file with some example data.
+// Pass a filepath to that file as an input.
+
 export default countWordsInFile;

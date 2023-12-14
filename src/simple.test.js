@@ -16,6 +16,11 @@ const cases = [
   ],
 ];
 
+it("reverse returns and empty array when given one", () => {
+  const output = reverse([]);
+  expect(output).toEqual([]);
+});
+
 it("works for all cases", () => {
   cases.forEach(([input, output]) => {
     expect(reverse(input)).toEqual(output);
