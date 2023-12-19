@@ -1,7 +1,7 @@
 import React from "react";
 import { it, expect, afterEach } from "vitest";
 import { render, fireEvent, cleanup } from "@testing-library/react";
-import Counter from "./Component.jsx";
+import Counter from "./Counter.jsx";
 
 // Clear out DOM after each test so they are independent.
 afterEach(cleanup);

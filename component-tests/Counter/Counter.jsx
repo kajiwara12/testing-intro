@@ -1,9 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+// Components rerender when:
+// 1. Its internal state changes (setState)
+// 2. The parent rerenders.
+
+// Component lifecycle
+// mount
+// update
+// unmount
 
 const Counter = () => {
   const [count, setCount] = useState(0);
   const increment = () => setCount((oldCount) => oldCount + 1);
   const decrement = () => setCount((oldCount) => oldCount - 1);
+
+  useEffect(() => {
+    let id = setTimeout(() => {
+      setCount((oldCount) => oldCount + 1);
+    }, 1000);
+
+    return () => {
+      clearTimeout(id);
+    };
+  }, []);
 
   return (
     <div>

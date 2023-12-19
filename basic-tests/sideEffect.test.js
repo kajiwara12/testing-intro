@@ -6,7 +6,7 @@ it("counts the number of words in the given file and logs it to the console", as
   // the correct information.
   const spy = vi.spyOn(console, "log").mockImplementation(() => {});
 
-  await countWordsInFile("./src/myfile.txt");
+  await countWordsInFile("./basic-tests/myfile.txt");
 
   expect(spy).toHaveBeenCalledWith(4);
   spy.mockRestore();
